@@ -23,7 +23,7 @@ program Spigot
      if (q == 9) then 
         nines = nines +1;
       else if (q == 10) then
-        write(7,"(I1)",advance="no") predigit
+        write(7,"(I1)",advance="no") predigit + 1
         do k=1,nines
           write(7,"(I1)",advance="no") 0     
         enddo   
@@ -33,7 +33,9 @@ program Spigot
         write(7,"(I1)",advance="no") predigit
         predigit = q
         if (nines /= 0) then
-          write(7,"(I1)",advance="no") 9
+          do k=1,nines
+            write(7,"(I1)",advance="no") 9
+          enddo
         endif
         nines = 0
        

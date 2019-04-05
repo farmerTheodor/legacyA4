@@ -20,8 +20,6 @@ int main(int argc, char const *argv[])
 	printf("please give a filename\n");
 	scanf("%s", fileName);
    fp = fopen(fileName, "w+");
-
-   fprintf(fp, "This is testing for fprintf...\n");
    
 	for( int j = 1; j < n + 1; ++j) {        
 		int q = 0;
